@@ -1,0 +1,276 @@
+{
+  "paragraphs": [
+    {
+      "title": "Exemple simple JSON",
+      "text": "%spark.pyspark\n\ndf \u003d spark.read.json(\"/zeppelin/files/dataframe/MOCK_DATA.json\")\ndfFiltered \u003d df.filter(df[\u0027gender\u0027] \u003d\u003d \"Female\")\ndfFiltered.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-14 15:35:42.958",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+----------+------+---+---------------+-----------+\n|               email|first_name|gender| id|     ip_address|  last_name|\n+--------------------+----------+------+---+---------------+-----------+\n|mblackledge0@free.fr|    Marlie|Female|  1|196.232.229.221| Blackledge|\n|ihallihan2@cisco.com|    Inessa|Female|  3|219.172.121.185|   Hallihan|\n| sdelia3@arizona.edu|    Sisely|Female|  4| 235.37.222.176|     D\u0027Elia|\n|cmickleburgh4@jig...|     Conny|Female|  5|  253.32.90.249|Mickleburgh|\n| dclose6@alibaba.com|      Dyna|Female|  7| 27.131.151.177|      Close|\n|slarmett7@instagr...|   Sheilah|Female|  8|    144.6.84.71|    Larmett|\n|umcgoldrickc@nyu.edu|      Ulla|Female| 13| 228.213.231.51| McGoldrick|\n|kpavisf@geocities.jp| Kimberlee|Female| 16|  31.202.70.235|      Pavis|\n|    vkeoghg@about.me|     Vanny|Female| 17|   7.61.183.169|      Keogh|\n|cshurlockh@e-rech...|  Chastity|Female| 18|  175.214.52.16|   Shurlock|\n|     cwilcoxi@go.com|Concettina|Female| 19|   134.9.122.68|     Wilcox|\n|sboullinj@howstuf...|     Shirl|Female| 20|  0.206.162.103|    Boullin|\n|sdewfallm@surveym...|    Serena|Female| 23|  150.79.52.201|    Dewfall|\n|istenetn@amazonaw...|      Ilka|Female| 24|  220.182.61.59|     Stenet|\n|cundrello@istockp...|     Clare|Female| 25|  121.168.46.62|    Undrell|\n| mlundbergp@yelp.com|    Mollie|Female| 26| 71.165.120.111|   Lundberg|\n| ecawthryt@google.pl|     Ellie|Female| 30|179.129.140.217|    Cawthry|\n|rfishpoolev@rever...|  Robinett|Female| 32| 199.65.187.154|  Fishpoole|\n|mputtrellw@google.it|   Morgana|Female| 33| 239.47.252.197|   Puttrell|\n|vwhisbyx@shareasa...|Vilhelmina|Female| 34|  64.239.115.61|     Whisby|\n+--------------------+----------+------+---+---------------+-----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d12"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d13"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1610637913777_1491636778",
+      "id": "paragraph_1610637913777_1491636778",
+      "dateCreated": "2021-01-14 15:25:13.777",
+      "dateStarted": "2021-01-14 15:32:01.307",
+      "dateFinished": "2021-01-14 15:32:01.794",
+      "status": "FINISHED"
+    },
+    {
+      "title": "Exemple simple CSV",
+      "text": "%spark.pyspark\n\ndf \u003d spark.read.option(\"header\",True).csv(\"/zeppelin/files/dataframe/MOCK_DATA.csv\")\ndfFiltered \u003d df.filter(df[\u0027gender\u0027] \u003d\u003d \"Male\")\ndfFiltered.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-14 15:38:38.936",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-----------+------------+--------------------+------+---------------+\n| id| first_name|   last_name|               email|gender|     ip_address|\n+---+-----------+------------+--------------------+------+---------------+\n|  3|   Hansiain|     Philpot|hphilpot2@moonfru...|  Male| 239.134.211.86|\n|  5|      Bruis|     Luscott|bluscott4@abc.net.au|  Male| 147.186.63.154|\n|  6|    Barnett|     Monelli| bmonelli5@weibo.com|  Male| 164.220.217.65|\n|  8|Christoffer|     Bourley|   cbourley7@cmu.edu|  Male| 56.154.183.129|\n| 10|      Bruno|  McCandless|bmccandless9@npr.org|  Male| 128.175.26.248|\n| 13|       Lock|        Vail|  lvailc@jiathis.com|  Male| 111.94.213.221|\n| 14|      Irvin|      Aronov|  iaronovd@state.gov|  Male|  65.48.195.174|\n| 15|    Quincey|      Allitt|qallitte@angelfir...|  Male|   44.239.64.84|\n| 16|       Ryun|    Reinhard|rreinhardf@plala....|  Male| 128.177.61.116|\n| 22|      Ozzie|       Nouch| onouchl@nbcnews.com|  Male| 249.133.63.105|\n| 23|  Alejandro|     Gourdon|  agourdonm@bing.com|  Male|  196.156.75.74|\n| 24|     Cedric|     Scotson|cscotsonn@state.t...|  Male|   96.151.28.83|\n| 27|   Vincenty|       Rakes|      vrakesq@wp.com|  Male|132.105.207.207|\n| 28|       Brew|       Ariss|     barissr@ucoz.ru|  Male|  17.240.51.226|\n| 29|     Bryant|Crombleholme|bcrombleholmes@te...|  Male|   254.1.68.105|\n| 30|    Claudio|       Trodd| ctroddt@webnode.com|  Male| 127.96.142.189|\n| 31|      Noach|   Tschursch|ntschurschu@time.com|  Male| 107.193.123.32|\n| 33|     Johnny|        Bark|     jbarkw@digg.com|  Male| 167.135.26.232|\n| 34|      Parke|  Bortolomei|pbortolomeix@salo...|  Male| 39.248.193.181|\n| 35|    Bernarr|     Paddock|bpaddocky@godaddy...|  Male|   84.96.64.113|\n+---+-----------+------------+--------------------+------+---------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d16"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d17"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1610637986745_1869605817",
+      "id": "paragraph_1610637986745_1869605817",
+      "dateCreated": "2021-01-14 15:26:26.745",
+      "dateStarted": "2021-01-14 15:38:38.942",
+      "dateFinished": "2021-01-14 15:38:39.422",
+      "status": "FINISHED"
+    },
+    {
+      "title": "Exemple simple groupBy",
+      "text": "%spark.pyspark\n\ndf \u003d spark.read.option(\"header\",True).csv(\"/zeppelin/files/dataframe/MOCK_DATA.csv\")\ndf.groupBy(\"gender\").count().show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-14 15:40:54.665",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+-----+\n|gender|count|\n+------+-----+\n|Female|  479|\n|  Male|  521|\n+------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d19"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d20"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d21"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d22"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d23"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d24"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1610638602953_328460320",
+      "id": "paragraph_1610638602953_328460320",
+      "dateCreated": "2021-01-14 15:36:42.953",
+      "dateStarted": "2021-01-14 15:40:03.276",
+      "dateFinished": "2021-01-14 15:40:05.113",
+      "status": "FINISHED"
+    },
+    {
+      "title": "Exemple simple en SQL",
+      "text": "%spark.pyspark\n\ndf \u003d spark.read.option(\"header\",True).csv(\"/zeppelin/files/dataframe/MOCK_DATA.csv\")\ndf.createOrReplaceTempView(\"people\")\nsqlDF \u003d spark.sql(\"SELECT * FROM people WHERE gender \u003d \u0027Male\u0027\")\nsqlDF.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-14 15:43:50.911",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-----------+------------+--------------------+------+---------------+\n| id| first_name|   last_name|               email|gender|     ip_address|\n+---+-----------+------------+--------------------+------+---------------+\n|  3|   Hansiain|     Philpot|hphilpot2@moonfru...|  Male| 239.134.211.86|\n|  5|      Bruis|     Luscott|bluscott4@abc.net.au|  Male| 147.186.63.154|\n|  6|    Barnett|     Monelli| bmonelli5@weibo.com|  Male| 164.220.217.65|\n|  8|Christoffer|     Bourley|   cbourley7@cmu.edu|  Male| 56.154.183.129|\n| 10|      Bruno|  McCandless|bmccandless9@npr.org|  Male| 128.175.26.248|\n| 13|       Lock|        Vail|  lvailc@jiathis.com|  Male| 111.94.213.221|\n| 14|      Irvin|      Aronov|  iaronovd@state.gov|  Male|  65.48.195.174|\n| 15|    Quincey|      Allitt|qallitte@angelfir...|  Male|   44.239.64.84|\n| 16|       Ryun|    Reinhard|rreinhardf@plala....|  Male| 128.177.61.116|\n| 22|      Ozzie|       Nouch| onouchl@nbcnews.com|  Male| 249.133.63.105|\n| 23|  Alejandro|     Gourdon|  agourdonm@bing.com|  Male|  196.156.75.74|\n| 24|     Cedric|     Scotson|cscotsonn@state.t...|  Male|   96.151.28.83|\n| 27|   Vincenty|       Rakes|      vrakesq@wp.com|  Male|132.105.207.207|\n| 28|       Brew|       Ariss|     barissr@ucoz.ru|  Male|  17.240.51.226|\n| 29|     Bryant|Crombleholme|bcrombleholmes@te...|  Male|   254.1.68.105|\n| 30|    Claudio|       Trodd| ctroddt@webnode.com|  Male| 127.96.142.189|\n| 31|      Noach|   Tschursch|ntschurschu@time.com|  Male| 107.193.123.32|\n| 33|     Johnny|        Bark|     jbarkw@digg.com|  Male| 167.135.26.232|\n| 34|      Parke|  Bortolomei|pbortolomeix@salo...|  Male| 39.248.193.181|\n| 35|    Bernarr|     Paddock|bpaddocky@godaddy...|  Male|   84.96.64.113|\n+---+-----------+------------+--------------------+------+---------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d27"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d28"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1610638794722_1182423911",
+      "id": "paragraph_1610638794722_1182423911",
+      "dateCreated": "2021-01-14 15:39:54.722",
+      "dateStarted": "2021-01-14 15:43:50.918",
+      "dateFinished": "2021-01-14 15:43:51.317",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-14 15:42:18.886",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1610638938886_1227892412",
+      "id": "paragraph_1610638938886_1227892412",
+      "dateCreated": "2021-01-14 15:42:18.886",
+      "status": "READY"
+    }
+  ],
+  "name": "DataFrame",
+  "id": "2FUAYT7SC",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview2",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

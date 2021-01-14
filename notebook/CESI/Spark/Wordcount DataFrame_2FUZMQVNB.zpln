@@ -1,0 +1,91 @@
+{
+  "paragraphs": [
+    {
+      "text": "%spark.pyspark\n\nfrom pyspark.sql.functions import split, explode\n\ndf \u003d spark.read.text(\"/zeppelin/files/wordcount/conseil-tenu-par-les-rats.txt\")\ndf.select(explode(split(df.value, \u0027\\s+\u0027)).alias(\u0027word\u0027)).groupBy(\"word\").count().show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-14 16:01:45.198",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+-----+\n|       word|count|\n+-----------+-----+\n|       coin|    1|\n|   savaient|    1|\n|         en|    6|\n|        par|    1|\n|     galand|    1|\n|      parut|    1|\n|       jour|    1|\n|      avait|    1|\n|    diable.|    1|\n|       bien|    1|\n|         ne|    4|\n|     Est-il|    1|\n|Rodilardus,|    1|\n|         Le|    3|\n|         il|    2|\n|       trou|    1|\n|     besoin|    1|\n|    guerre,|    1|\n|        fut|    2|\n|       sont|    1|\n+-----------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d32"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d33"
+            },
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d34"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1610639524706_219923951",
+      "id": "paragraph_1610639524706_219923951",
+      "dateCreated": "2021-01-14 15:52:04.706",
+      "dateStarted": "2021-01-14 16:01:45.208",
+      "dateFinished": "2021-01-14 16:01:46.010",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-14 15:53:37.313",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1610639617312_949506635",
+      "id": "paragraph_1610639617312_949506635",
+      "dateCreated": "2021-01-14 15:53:37.313",
+      "status": "READY"
+    }
+  ],
+  "name": "Wordcount DataFrame",
+  "id": "2FUZMQVNB",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview2",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
