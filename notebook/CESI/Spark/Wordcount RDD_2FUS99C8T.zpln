@@ -1,0 +1,99 @@
+{
+  "paragraphs": [
+    {
+      "title": "Exemple de code Wordcount en RDD",
+      "text": "%spark.pyspark\n\nwords \u003d sc.textFile(\"/zeppelin/files/wordcount/conseil-tenu-par-les-rats.txt\").flatMap(lambda line: line.split(\" \"))\nwordCounts \u003d words.map(lambda word: (word, 1)).reduceByKey(lambda a,b:a +b)\nwordCounts.collect()",
+      "user": "anonymous",
+      "dateUpdated": "2021-01-14 15:06:57.973",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "_1": "string",
+                      "_2": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[(\u0027Conseil\u0027, 1),\n (\u0027les\u0027, 1),\n (\u0027rats\u0027, 3),\n (\u0027\u0027, 2),\n (\u0027Faisait\u0027, 1),\n (\u0027des\u0027, 2),\n (\u0027telle\u0027, 1),\n (\u0027déconfiture\u0027, 1),\n (\"l\u0027on\", 1),\n (\u0027voyait\u0027, 1),\n (\u0027plus,\u0027, 1),\n (\u0027Tant\u0027, 1),\n (\u0027en\u0027, 6),\n (\u0027avait\u0027, 1),\n (\u0027mis\u0027, 1),\n (\u0027sépulture.\u0027, 1),\n (\u0027Le\u0027, 3),\n (\u0027peu\u0027, 1),\n (\"qu\u0027il\", 3),\n (\"n\u0027osant\", 1),\n (\u0027quitter\u0027, 1),\n (\u0027son\u0027, 2),\n (\u0027trou\u0027, 1),\n (\u0027à\u0027, 2),\n (\u0027manger\u0027, 1),\n (\u0027que\u0027, 5),\n (\u0027le\u0027, 4),\n (\u0027quart\u0027, 1),\n (\u0027soûl,\u0027, 1),\n (\u0027Rodilard\u0027, 1),\n (\u0027chez\u0027, 1),\n (\u0027misérable,\u0027, 1),\n (\u0027Non\u0027, 1),\n (\u0027pour\u0027, 3),\n (\u0027diable.\u0027, 1),\n (\u0027haut\u0027, 1),\n (\u0027au\u0027, 2),\n (\u0027loin\u0027, 1),\n (\u0027alla\u0027, 1),\n (\u0027tout\u0027, 1),\n (\u0027avec\u0027, 1),\n (\u0027demeurant\u0027, 1),\n (\u0027tint\u0027, 1),\n (\u0027chapitre\u0027, 1),\n (\u0027nécessité\u0027, 1),\n (\u0027présente.\u0027, 1),\n (\"l\u0027abord,\", 1),\n (\u0027leur\u0027, 2),\n (\u0027doyen,\u0027, 1),\n (\u0027personne\u0027, 1),\n (\u0027fort\u0027, 1),\n (\u0027fallait,\u0027, 1),\n (\u0027grelot\u0027, 1),\n (\u0027cou\u0027, 1),\n (\"Qu\u0027ainsi,\", 1),\n (\u0027irait\u0027, 1),\n (\u0027guerre,\u0027, 1),\n (\u0027ils\u0027, 1),\n (\"Qu\u0027ils\", 1),\n (\"n\u0027y\", 2),\n (\u0027savaient\u0027, 1),\n (\u0027ce\u0027, 1),\n (\u0027fut\u0027, 2),\n (\"l\u0027avis\", 1),\n (\u0027Doyen:\u0027, 1),\n (\u0027Chose\u0027, 1),\n (\u0027tous\u0027, 1),\n (\u0027difficulté\u0027, 1),\n (\u0027vas\u0027, 1),\n (\u0027suis\u0027, 1),\n (\u0027pas\u0027, 1),\n (\u0027si\u0027, 1),\n (\u0027sot,\u0027, 1),\n (\u0027Si\u0027, 1),\n (\u0027bien\u0027, 1),\n (\u0027sans\u0027, 1),\n (\u0027faire\u0027, 1),\n (\"J\u0027ai\", 1),\n (\u0027maints\u0027, 1),\n (\u0027chapitres\u0027, 3),\n (\u0027vus,\u0027, 1),\n (\u0027Qui\u0027, 1),\n (\u0027néant\u0027, 1),\n (\u0027sont\u0027, 1),\n (\u0027tenus;\u0027, 1),\n (\u0027Chapitres,\u0027, 1),\n (\u0027rats,\u0027, 1),\n (\u0027moines,\u0027, 1),\n (\u0027chanoines.\u0027, 1),\n (\u0027délibérer,\u0027, 1),\n (\u0027conseillers\u0027, 1),\n (\"d\u0027exécuter,\", 1),\n (\u0027rencontre\u0027, 1),\n (\u0027tenu\u0027, 1),\n (\u0027par\u0027, 1),\n (\u0027Un\u0027, 1),\n (\u0027chat,\u0027, 2),\n (\u0027nommé\u0027, 1),\n (\u0027Rodilardus,\u0027, 1),\n (\u0027Que\u0027, 1),\n (\"n\u0027en\", 1),\n (\u0027presque\u0027, 1),\n (\u0027il\u0027, 2),\n (\u0027dedans\u0027, 1),\n (\u0027la\u0027, 3),\n (\u0027restait\u0027, 1),\n (\u0027Ne\u0027, 2),\n (\u0027trouvait\u0027, 1),\n (\u0027de\u0027, 7),\n (\u0027Et\u0027, 1),\n (\u0027passait,\u0027, 1),\n (\u0027gent\u0027, 1),\n (\u0027un\u0027, 5),\n (\u0027mais\u0027, 2),\n (\u0027Or,\u0027, 1),\n (\u0027jour\u0027, 1),\n (\"qu\u0027au\", 1),\n (\u0027et\u0027, 2),\n (\u0027galand\u0027, 1),\n (\u0027chercher\u0027, 1),\n (\u0027femme,\u0027, 1),\n (\u0027Pendant\u0027, 1),\n (\u0027sabbat\u0027, 1),\n (\u0027fit\u0027, 1),\n (\u0027sa\u0027, 2),\n (\u0027dame,\u0027, 1),\n (\u0027coin\u0027, 1),\n (\u0027Sur\u0027, 1),\n (\u0027Dès\u0027, 1),\n (\u0027prudente,\u0027, 1),\n (\u0027Opina\u0027, 1),\n (\u0027plus\u0027, 4),\n (\u0027tôt\u0027, 1),\n (\u0027tard,\u0027, 1),\n (\u0027Attacher\u0027, 1),\n (\u0027Rodilard;\u0027, 1),\n (\u0027quand\u0027, 1),\n (\u0027De\u0027, 1),\n (\u0027marche\u0027, 1),\n (\u0027avertis,\u0027, 1),\n (\"s\u0027enfuiraient\", 1),\n (\u0027terre;\u0027, 1),\n (\u0027moyen.\u0027, 1),\n (\u0027Chacun\u0027, 1),\n (\u0027Monsieur\u0027, 1),\n (\u0027ne\u0027, 4),\n (\u0027parut\u0027, 1),\n (\u0027salutaire.\u0027, 1),\n (\u0027La\u0027, 2),\n (\"d\u0027attacher\", 1),\n (\u0027grelot.\u0027, 1),\n (\"L\u0027un\", 1),\n (\u0027dit:\u0027, 1),\n (\u0027Je\u0027, 2),\n (\u0027point,\u0027, 1),\n (\u0027je\u0027, 1),\n (\"L\u0027autre:\", 1),\n (\u0027saurais.\u0027, 1),\n (\u0027rien\u0027, 1),\n (\u0027On\u0027, 1),\n (\u0027se\u0027, 2),\n (\u0027quitta.\u0027, 1),\n (\u0027ainsi\u0027, 1),\n (\u0027non\u0027, 1),\n (\u0027Voire\u0027, 1),\n (\u0027faut-il\u0027, 1),\n (\u0027cour\u0027, 1),\n (\u0027foisonne;\u0027, 1),\n (\u0027Est-il\u0027, 1),\n (\u0027besoin\u0027, 1),\n (\"L\u0027on\", 1),\n (\u0027personne.\u0027, 1)]"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://a2b79aca2a1e:4040/jobs/job?id\u003d7"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1610635729743_2024812660",
+      "id": "paragraph_1610635729743_2024812660",
+      "dateCreated": "2021-01-14 14:48:49.743",
+      "dateStarted": "2021-01-14 15:05:49.187",
+      "dateFinished": "2021-01-14 15:05:49.595",
+      "status": "FINISHED"
+    }
+  ],
+  "name": "Wordcount RDD",
+  "id": "2FUS99C8T",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview2",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
